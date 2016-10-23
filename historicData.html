@@ -89,7 +89,7 @@ Interactive brokers API.</p>
 <tbody valign="top">
 <tr><td class="option-group">
 <kbd><span class="option">--symbols=all</span></kbd></td>
-<td>symbols separated by coma: SPY,VXX</td></tr>
+<td>symbols separated by comma: SPY,VXX</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">--end</span></kbd></td>
 <td>timestamp from where to start download.                         Defaults to last trading date</td></tr>
@@ -108,6 +108,12 @@ Interactive brokers API.</p>
 file through command line parameter.</li>
 <li>ticks are logged to a rotating csv file, new file will start on midnight</li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you need to run this program for longer time periods, it is advisable
+to use IB Gateway instead of IB TWS. The latter will automatically log off at
+the end of each day.</p>
+</div>
 <div class="section" id="id1">
 <h3>Running script<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Log ticks for a set of stocks</p>
@@ -297,9 +303,21 @@ If many symbols are provided, it will return a wide panel</p>
 <h3><a href="index.html">Table Of Contents</a></h3>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#interactive-brokers-historic-data">Interactive Brokers historic data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tickLogger">Interactive Brokers tick data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#yahoo-finance">Yahoo Finance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interactive-brokers-historic-data">Interactive Brokers historic data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-script">Running script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tickLogger">Interactive Brokers tick data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Running script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#yahoo-finance">Yahoo Finance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-historic-data">Getting historic data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#singe-symbol">Singe symbol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-symbols">Multiple symbols</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-current-quotes">Getting current quotes</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
